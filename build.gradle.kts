@@ -3,7 +3,9 @@ plugins {
 	kotlin("plugin.spring") version "1.9.25"
 	id("org.springframework.boot") version "3.3.3"
 	id("io.spring.dependency-management") version "1.1.6"
+	id("org.jetbrains.kotlin.plugin.allopen") version "1.9.25"
 	kotlin("plugin.jpa") version "1.9.25"
+	kotlin("plugin.noarg") version "1.9.25"
 }
 
 group = "taehyeon.brothers"
