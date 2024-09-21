@@ -16,6 +16,6 @@ class Diary(
     @Column(name = "title", length = 100, nullable = false)
     var title: String,
 
-    @Column(name = "content", length = 4000)
+    @Column(name = "content", length = 4000, nullable = false)
     var content: String
 )
