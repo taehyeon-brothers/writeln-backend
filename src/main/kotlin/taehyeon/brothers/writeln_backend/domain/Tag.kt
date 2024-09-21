@@ -13,6 +13,6 @@ class Tag(
     @Column(name = "diary_id")
     var diaryId: Long = 0,
 
-    @Column(name = "content", length = 100)
-    var content: String
+    @Column(name = "name", length = 100)
+    var name: String
 )
