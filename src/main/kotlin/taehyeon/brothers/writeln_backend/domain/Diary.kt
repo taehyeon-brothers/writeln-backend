@@ -10,8 +10,9 @@ class Diary(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @Column(name = "user_id", nullable = false)
-    var userId: Long,
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "user_id", nullable = false, foreignKey = ForeignKey(ConstraintMode.NO_CONSTRAINT))
+    var user: User,
 
     @Column(name = "title", length = 100, nullable = false)
     var title: String,

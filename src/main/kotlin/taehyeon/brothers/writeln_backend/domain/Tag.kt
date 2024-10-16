@@ -10,8 +10,9 @@ class Tag(
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     val id: Long = 0,
 
-    @Column(name = "diary_id")
-    var diaryId: Long = 0,
+    @ManyToOne(fetch = FetchType.LAZY)
+    @JoinColumn(name = "diary_id", foreignKey = ForeignKey(ConstraintMode.NO_CONSTRAINT))
+    var diary: Diary,
 
     @Column(name = "name", length = 100)
     var name: String
